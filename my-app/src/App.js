@@ -8,6 +8,27 @@ function App() {
   const [myGroceries, setMyGroceries] = useState(groceries)
   const [myShoppingList, setMyShoppingList] = useState(shoppingList)
 
+  const handleProduct = (e) => {
+    let productId = parseInt(e.target.value)
+    myGroceries.filter(product => product.id === productId)[0].quantity --
+
+    if(myGroceries.filter(product => product.id === productId)[0].quantity === 0){
+      let product = myGroceries.filter(product => product.id === productId)[0]
+      myGroceries.splice(myGroceries.indexOf(product), 1)
+      myGroceries.push(product)
+    }
+
+    if(!myShoppingList.filter(product => product.id === productId).length){
+      myShoppingList.push({...myGroceries.filter(product => product.id === productId)[0]})
+      myShoppingList.filter(product => product.id === productId)[0].quantity = 1
+    }else{
+      myShoppingList.filter(product => product.id === productId)[0].quantity ++
+    }
+
+    setMyGroceries([...myGroceries])
+    setMyShoppingList([...myShoppingList])
+  }
+
   return (
     <>
       <div className='container' style={{'display': 'flex'}}>
@@ -19,7 +40,13 @@ function App() {
           <ul class="list-group list-group-flush">
             {myGroceries.map(product => <li class="list-group-item">
               <img src={product.imgSrc} alt='uh oh' style={{'width': '5rem', 'height': 'auto'}}></img>
-              <span style={{'paddingLeft': '2rem'}}>Price: {product.price}, QTY: {product.quantity}</span>
+              {product.quantity ? (
+                <button value={product.id} onClick={handleProduct}>
+                  Price: {product.price}, QTY: {product.quantity}
+                </button>
+              ): (
+                <p>Price: {product.price}, QTY: {product.quantity} (Out Of Stock)</p>
+              )}
             </li>)}
           </ul>
         </div>
