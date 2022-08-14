@@ -1,0 +1,51 @@
+[
+    {
+        "id": 0,
+        "name": "meat",
+        "price": 33,
+        "quantity": 10,
+        "imgSrc": "https://www.msc.com/-/media/images/msc-cargo/sectors/food-and-beverages/meat/msc16006196/msc16006196/msc16006196_s.jpg"
+    },
+    {
+        "id": 1,
+        "name": "eggs",
+        "price": 15,
+        "quantity": 15,
+        "imgSrc": "https://images-prod.healthline.com/hlcmsresource/images/AN_images/health-benefits-of-eggs-1296x728-feature.jpg"
+    },
+    {
+        "id": 2,
+        "name": "cheese",
+        "price": 27,
+        "quantity": 20,
+        "imgSrc": "https://images-prod.healthline.com/hlcmsresource/images/AN_images/healthiest-cheese-1296x728-swiss.jpg"
+    },
+    {
+        "id": 3,
+        "name": "fish",
+        "price": 40,
+        "quantity": 25,
+        "imgSrc": "https://post.healthline.com/wp-content/uploads/2019/09/salmon-fish-raw-whole-ice-732x549-thumbnail.jpg"
+    },
+    {
+        "id": 4,
+        "name": "milk",
+        "price": 12,
+        "quantity": 30,
+        "imgSrc": "https://images.healthshots.com/healthshots/en/uploads/2021/11/11212048/milk.jpg"
+    },
+    {
+        "id": 5,
+        "name": "lettuce",
+        "price": 10,
+        "quantity": 35,
+        "imgSrc": "https://www.gurneys.com/images/800/14627A.jpg"
+    },
+    {
+        "id": 6,
+        "name": "tomato",
+        "price": 17,
+        "quantity": 40,
+        "imgSrc": "https://images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg"
+    }
+]
